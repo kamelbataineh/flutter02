@@ -1,117 +1,117 @@
 import 'package:flutter/material.dart';
 
-main(){
-  runApp( Statefullapp ());
+main() {
+  runApp(Statefullapp());
 }
-class Statefullapp extends StatefulWidget{
+
+class Statefullapp extends StatefulWidget {
   @override
-State<StatefulWidget> createState(){
-    return  FirstApp();
+  State<StatefulWidget> createState() {
+    return FirstApp();
   }
 }
 
-class FirstApp extends State<Statefullapp>{
-  int counter=0;
+class FirstApp extends State<Statefullapp> {
+  int counter = 0;
+
   @override
-  Widget build (BuildContext context) {
+  Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("App Bar",
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.black,
-              fontWeight: FontWeight.bold
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          appBar: AppBar(
+            title: Text(
+              "                       قائمة الأذكار        ",
+              style: TextStyle(
+                fontSize: 20,
+                // textAlign: TextAlign.center,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
             ),
+            backgroundColor: Colors.black,
           ),
-backgroundColor:Colors.red ,
-        ),
-  body:Column(
-    children: [  Container(
-      width: double.infinity, // لملء عرض الشاشة بالكامل
-      color: Colors.blue, // لون خلفية الشريط
-      padding: EdgeInsets.symmetric(vertical: 10), // حشوة لتوسيع الشريط
-      child: Text(
-        "Result $counter",
-        textAlign: TextAlign.center, // لجعل النص في المنتصف
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 40,
-        ),
-      ),
-    ),
-      ElevatedButton(
-          onPressed:(){
-        setState(() {
-          counter++;
-        });
+          body: Column(
+            children: [
+              Column(children: [
+                Container(
+                  width:500,
+                  color: Colors.blue,
+                  child: Text(
+                    "العداد                      $counter ",
+                    textAlign: TextAlign.end,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 40,
+                    ),
+                  ),
+                ),
+                ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        if (counter == 33) {
+                          counter = 0;
+                        } else {
+                          counter++;
+                        }
+                      });
+                    },
+                    child: Text(
+                      "سبحان الله",
+                      style: TextStyle(
+                          fontSize: 20,
 
-          },
-          child:Text("أستغفرالله",
-          style: TextStyle(
-            fontSize: 20,
-            color: Colors.red,
-            fontWeight: FontWeight.bold
-          ),)),
-      SizedBox(width: 2000),
-      ElevatedButton(
-          onPressed:(){
-            setState(() {
-              counter++;
-            });
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold),
+                    )),
+                ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        if (counter == 33) {
+                          counter = 0;
+                        } else {
+                          counter++;
+                        }
+                      });
+                    },
+                    child: Text(
+                      "أستغفر الله",
+                      style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold),
+                    )),
+                ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        if (counter == 33) {
+                          counter = 0;
+                        } else {
+                          counter++;
+                        }
+                      });
+                    },
+                    child: Text(
+                      "الله اكبر",
+                      style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold),
+                    )),
+                ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      counter = 0;
+                    });
 
-          },
-          child:Text("الحمدالله",
-            style: TextStyle(
-                fontSize: 20,
-                color: Colors.red,
-                fontWeight: FontWeight.bold
-            ),)),
-      ElevatedButton(
-          onPressed:(){
-            setState(() {
-              counter++;
-            });
+                    },
 
-          },
-          child:Text("الله اكبر",
-            style: TextStyle(
-                fontSize: 20,
-                color: Colors.red,
-                fontWeight: FontWeight.bold
-            ),)),
-          FloatingActionButton(
-            onPressed: () {
-              setState(() {
-                counter = 0; // تصفير قيمة العداد عند الضغط
-              });
-            },
-            backgroundColor: Colors.red, // لون الخلفية للزر
-            child: Icon(Icons.refresh), // أيقونة داخل الزر
-            tooltip: 'تصفير العداد', // نص يظهر عند التحويم على الزر
+                  child: Icon(Icons.refresh_outlined),
+
+                ),
+              ]),
+            ],
           ),
-
-    ]
-
-      )
-      ),
-    );
+        ));
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
