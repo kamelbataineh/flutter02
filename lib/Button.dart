@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Statefullapp extends StatefulWidget {
+class Statefullapp2 extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     return FirstApp();
   }
 }
 
-class FirstApp extends State<Statefullapp> {
+class FirstApp extends State<Statefullapp2> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
