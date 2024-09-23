@@ -81,6 +81,11 @@ flutter:
         - asset: fonts/PlaywriteCU-ExtraLight.ttf
 #        - asset: images/WhatsApp Image 2024-09-15 at 18.26.01_6b55a4a3.jpg
 #        - asset: images/WhatsApp Image 2024-09-15 at 18.41.08_cedfbacf.jpg
+        - asset: images/images2/14.jpg
+        - asset: images/images2/13.jpg
+        - asset: images/images2/12.jpg
+        - asset: images/images2/15.jpg
+        - asset: images/images2/12-2.jpg
         - asset: images/images2/WhatsApp Image 2024-09-15 at 18.51.49_c82066c0.png
 #        - asset: images/WhatsApp Image 2024-09-15 at 18.41.08_cedfbacf.jpg
   #       - asset: fonts/Schyler-Italic.ttf
